@@ -197,6 +197,15 @@ function checkTokens(tokens) {
       }
     }
   }
+  // O bloco design-tokens do DESIGN.md (lido pelo lint) também precisa bater.
+  const block = /```design-tokens\n([\s\S]*?)```/.exec(read(path.join(ROOT, "DESIGN.md")))?.[1] ?? ""
+  const listed = (key) => (new RegExp(`^${key}:(.*)$`, "m").exec(block)?.[1] ?? "").split(",").map(norm).filter(Boolean)
+  const want = (list) => [...new Set(list.map(norm))].sort().join(" ")
+  const colors = tokens.color.tokens.map((t) => (typeof t.value === "string" ? t.value : t.value.light))
+  if (want(listed("colors")) !== want(colors)) errors.push("DESIGN.md: as cores do bloco design-tokens não batem com ds/tokens.json")
+  if (want(listed("radii").filter((r) => r !== "0")) !== want(tokens.radius.tokens.map((t) => t.value))) {
+    errors.push("DESIGN.md: os raios do bloco design-tokens não batem com ds/tokens.json")
+  }
   if (errors.length) fail(`tokens divergentes:\n  ${errors.join("\n  ")}`)
 }
 

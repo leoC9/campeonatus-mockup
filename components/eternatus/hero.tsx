@@ -25,11 +25,11 @@ function Hero({
     >
       <div className="mx-auto flex max-w-[1120px] flex-col gap-3">
         {eyebrow ? <Eyebrow tone="gold">{eyebrow}</Eyebrow> : null}
-        <h1 className="m-0 max-w-[620px] type-hero-mobile md:type-hero">
+        <h1 className="m-0 max-w-[620px] type-hero-mobile text-balance md:type-hero">
           {title}
         </h1>
         {lede ? (
-          <p className="m-0 max-w-[520px] type-lede text-on-navy-muted">
+          <p className="m-0 max-w-[520px] type-lede text-pretty text-on-navy-muted">
             {lede}
           </p>
         ) : null}

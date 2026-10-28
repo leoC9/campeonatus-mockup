@@ -30,6 +30,7 @@ Sistema visual da Eternatus Card House e do Eternacamp — o site da loja, a ins
 ## Tipografia
 
 - Uma família: Inter (`--font-sans`), carregada do Google Fonts. Pesos 400, 500 e 600.
+- Escala: `eyebrow` 11 · `caption` 12 · `small` 13 · `ui` 14 (tabela, sidebar, controles do backoffice) · `body` 15 · `lede` 17 · `h3` 18 · `h2` 24 · `h1` 30 · `hero` 40 · `display` 48. Tamanho fora dela entra primeiro como estilo novo.
 - Títulos em peso 500 com tracking levemente negativo (`display`, `hero`, `h1`, `h2`); só `h3` vai a 600.
 - `eyebrow` em caixa alta com tracking largo, sempre acima de um título.
 - Números de tabela, pontos, OWR e contadores usam `font-variant-numeric: tabular-nums`.

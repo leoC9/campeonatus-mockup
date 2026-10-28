@@ -41,7 +41,7 @@ function Sidebar({
                 href={href}
                 aria-current={on ? "page" : undefined}
                 className={cn(
-                  "block rounded-md px-3 py-2 text-[14px] no-underline focus-visible:outline-2 focus-visible:outline-gold",
+                  "block rounded-md px-3 py-2 type-ui no-underline focus-visible:outline-2 focus-visible:outline-gold",
                   on
                     ? "bg-sidebar-accent text-on-navy"
                     : "text-on-navy-muted hover:text-on-navy"
@@ -54,7 +54,7 @@ function Sidebar({
         })}
       </ul>
       {footer ? (
-        <div className="mt-auto px-3 pt-6 text-[12px] text-on-navy-muted">
+        <div className="mt-auto px-3 pt-6 type-caption font-normal text-on-navy-muted">
           {footer}
         </div>
       ) : null}
