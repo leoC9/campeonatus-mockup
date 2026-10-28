@@ -1,0 +1,15 @@
+<!-- @dsCard group="Content" height=180 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Table</title></head>
+<body>
+<div id="r" style="padding:24px;max-width:480px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+function tr(c,cells){return h(E.TableRow,null,cells.map(function(x,i){return h(c,{key:i,className:i>0?'text-right tabular-nums':''},x);}));}
+ReactDOM.createRoot(document.getElementById('r')).render(h(E.Table,null,
+h(E.TableHeader,null,tr(E.TableHead,['Mesa','Jogador A','Jogador B'])),
+h(E.TableBody,null,tr(E.TableCell,['Mesa 1','2','1']),tr(E.TableCell,['Mesa 2','0','2']),tr(E.TableCell,['Mesa 3','1','1']))));
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- @dsCard group="Content" height=200 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>EventCard</title></head>
+<body>
+<div id="r" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+function foot(a,b){return h(React.Fragment,null,h('span',null,a),h(E.Button,{variant:'link'},b));}
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+h(E.EventCard,{when:'Quinta · 19h30',status:'Abertas',statusTone:'info',title:'Liguinha Eternatus #24',meta:'Standard · Suíço 4 · Bo3'},foot('R$ 25,00 · 18/24','Inscrever-se')),
+h(E.EventCard,{when:'Sábado · 14h',status:'Últimas vagas',statusTone:'danger',title:'Gym Leader Challenge #08',meta:'GLC · Suíço 3 · Bo1'},foot('R$ 20,00 · 14/16','Inscrever-se'))));
+</script>
+</body>
+</html>

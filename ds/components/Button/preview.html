@@ -1,0 +1,14 @@
+<!-- @dsCard group="Actions" height=150 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Button</title></head>
+<body>
+<div id="a" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:24px"></div>
+<div id="b" style="display:flex;gap:12px;padding:20px 24px;background:var(--navy-950)"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('a')).render(h(React.Fragment,null,h(E.Button,null,'Confirmar inscrição'),h(E.Button,{variant:'secondary'},'Cancelar'),h(E.Button,{variant:'link'},'Inscrever-se'),h(E.Button,{size:'sm'},'+ Novo campeonato'),h(E.Button,{disabled:true},'Encerrado')));
+ReactDOM.createRoot(document.getElementById('b')).render(h(React.Fragment,null,h(E.Button,{variant:'hero'},'Ver eventos'),h(E.Button,{variant:'hero-ghost'},'Standings')));
+</script>
+</body>
+</html>

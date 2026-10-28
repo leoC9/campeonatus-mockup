@@ -1,0 +1,18 @@
+<!-- @dsCard group="Content" height=210 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>DataTable</title></head>
+<body>
+<div id="r" style="padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(E.DataTable,{columns:[
+{key:'n',label:'Campeonato'},{key:'d',label:'Data',numeric:true},{key:'f',label:'Formato'},{key:'j',label:'Jogadores',numeric:true},
+{key:'s',label:'Situação',render:function(r){return h(E.Badge,{tone:r.t},r.s);}},
+{key:'a',label:'',align:'right',render:function(r){return h(E.Button,{variant:'link'},r.a);}}],
+rows:[{n:'Liguinha Eternatus #24',d:'18/09',f:'Suíço 4 · Bo3',j:18,s:'Rodada 3 de 4',t:'info',a:'Abrir'},
+{n:'Gym Leader Challenge #08',d:'20/09',f:'Suíço 3 · Bo1',j:14,s:'Inscrições',t:'outline',a:'Abrir'},
+{n:'Liguinha Eternatus #23',d:'11/09',f:'Suíço 4 · Bo3',j:22,s:'Finalizado',t:'neutral',a:'Standings'}]}));
+</script>
+</body>
+</html>

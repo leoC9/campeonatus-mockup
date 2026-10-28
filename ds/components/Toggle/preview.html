@@ -1,0 +1,12 @@
+<!-- @dsCard group="Forms" height=80 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Toggle</title></head>
+<body>
+<div id="r" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.Toggle,{variant:'outline','aria-label':'Mostrar só pendentes'},'Só pendentes'),h(E.Toggle,{variant:'outline',defaultPressed:true,'aria-label':'Mostrar drops'},'Mostrar drops')));
+</script>
+</body>
+</html>
