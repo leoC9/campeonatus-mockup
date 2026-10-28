@@ -1,0 +1,12 @@
+<!-- @dsCard group="Forms" height=80 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>ToggleGroup</title></head>
+<body>
+<div id="r" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(E.ToggleGroup,{type:'single',defaultValue:'4','aria-label':'Rodadas'},['3','4','5','6'].map(function(v){return h(E.ToggleGroupItem,{key:v,value:v},v+' rodadas');})));
+</script>
+</body>
+</html>

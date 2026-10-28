@@ -1,0 +1,12 @@
+<!-- @dsCard group="Status" height=90 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Progress</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:16px;padding:24px;max-width:360px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.Progress,{value:6,max:9,'aria-label':'Mesas reportadas'}),h(E.Progress,{value:30,'aria-label':'Inscrições'})));
+</script>
+</body>
+</html>

@@ -22,9 +22,9 @@ function SectionHeading({
         <Eyebrow className="shrink-0">{eyebrow}</Eyebrow>
         <span aria-hidden className="h-px flex-1 bg-line" />
       </div>
-      <h2 className="m-0 type-h2 text-ink">{title}</h2>
+      <h2 className="m-0 type-h2 text-balance text-ink">{title}</h2>
       {description ? (
-        <p className="m-0 max-w-[620px] text-ink-muted">{description}</p>
+        <p className="m-0 max-w-[620px] text-pretty text-ink-muted">{description}</p>
       ) : null}
     </header>
   )

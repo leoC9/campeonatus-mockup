@@ -22,8 +22,8 @@ const buttonVariants = cva(
           "border-on-navy-muted bg-transparent text-on-navy hover:bg-on-navy/8 focus-visible:outline-gold",
       },
       size: {
-        md: "h-11 px-6 text-[15px]",
-        sm: "h-8 px-3 text-[13px]",
+        md: "h-11 px-6 type-body font-medium",
+        sm: "h-8 px-3 type-small font-medium",
       },
       block: {
         true: "flex w-full",

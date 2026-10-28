@@ -30,7 +30,7 @@ function ProgressCard({
       )}
     >
       <Eyebrow tone="muted">{label}</Eyebrow>
-      <p className="m-0 text-[14px] text-ink-muted">
+      <p className="m-0 type-ui text-ink-muted">
         <b className="type-stat text-ink">{value}</b> {caption}
       </p>
       <Progress

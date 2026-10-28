@@ -24,6 +24,10 @@ The design system is organized in two layers:
 
 `button` · `badge` · `card` · `input` · `label` · `table` · `toggle` · `toggle-group` · `progress`
 
+## Design System no claude.ai
+
+The components above are published as the **Eternatus Card House** Design System artifact, which screens built in Claude use. This repo is its source of truth: `npm run ds:build` generates the artifact's files and `npm run ds:check` renders every preview. See [`ds/WORKFLOW.md`](ds/WORKFLOW.md).
+
 ## Tech Stack
 
 | Layer     | Tech                                          |

@@ -14,12 +14,17 @@ function Logo({
   className?: string
   priority?: boolean
 }) {
+  const h = Math.max(32, height)
+
+  // A altura vai também no style: o reset do Tailwind (img { height: auto })
+  // venceria o atributo e o logo sairia no tamanho do arquivo.
   return (
     <Image
       src={logo}
       alt="Eternatus Card House"
-      height={Math.max(32, height)}
+      height={h}
       priority={priority}
+      style={{ height: h }}
       className={cn("w-auto", className)}
     />
   )

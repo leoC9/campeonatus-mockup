@@ -1,0 +1,12 @@
+<!-- @dsCard group="Forms" height=80 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Segmented</title></head>
+<body>
+<div id="r" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.Segmented,{label:'Situação',options:['Em andamento','Agendados','Finalizados']}),h(E.Segmented,{label:'Partida',options:['Melhor de 1','Melhor de 3'],defaultValue:'Melhor de 3'})));
+</script>
+</body>
+</html>

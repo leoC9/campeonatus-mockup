@@ -1,0 +1,12 @@
+<!-- @dsCard group="Forms" height=150 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Input</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:16px;padding:24px;max-width:360px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.Input,{placeholder:'Nome completo','aria-label':'Nome completo'}),h(E.Input,{defaultValue:'abc','aria-invalid':true,'aria-label':'POPID'})));
+</script>
+</body>
+</html>
