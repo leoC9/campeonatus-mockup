@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚔️ Campeonatus — Mockup
+
+> Design system and layout reference for the **Campeonatus** platform.
+
+Every screen, component and visual pattern in this repo is designed from scratch by us and serves as the single source of truth for what gets built in the official product.
+
+---
+
+## About
+
+Campeonatus is a competitive tournament platform. This repository holds the **mockups and design system** — the visual blueprint that guides front-end implementation on the main project.
+
+Nothing here is throwaway: layouts are detailed, components are functional, and the structure mirrors what production will look like.
+
+## Components
+
+The design system is organized in two layers:
+
+**`eternatus/`** — custom components that carry the Campeonatus identity:
+
+`hero` · `sidebar` · `site-header` · `data-table` · `standings-row` · `event-card` · `progress-card` · `section-heading` · `segmented` · `eyebrow` · `text-field` · `logo`
+
+**`ui/`** — base primitives built on top of Radix UI:
+
+`button` · `badge` · `card` · `input` · `label` · `table` · `toggle` · `toggle-group` · `progress`
+
+## Tech Stack
+
+| Layer     | Tech                                          |
+|-----------|-----------------------------------------------|
+| Framework | [Next.js 16](https://nextjs.org)              |
+| Language  | [TypeScript](https://www.typescriptlang.org)  |
+| Styling   | [Tailwind CSS](https://tailwindcss.com)       |
+| UI Base   | [Radix UI](https://www.radix-ui.com)          |
+| Icons     | [Lucide](https://lucide.dev)                  |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000) to browse the layouts.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center"><sub>Built with purpose. Designed by us.</sub></p>
