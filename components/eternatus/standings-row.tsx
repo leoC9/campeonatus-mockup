@@ -7,8 +7,11 @@ import { Collapsible as CollapsiblePrimitive } from "radix-ui"
 
 import { Badge } from "@/components/ui/badge"
 
+import { podium, PositionChip } from "./podium"
+
 // Linha da tabela pública no celular: posição, jogador, OWR, pontos e V-E-D.
-// Só o 1º lugar recebe borda `gold`. `credit` só no standings final.
+// Top 3 com medalha e moldura tingida (ouro, prata, bronze); `highlight`
+// reforça o líder. `credit` só no standings final.
 // Com `oowr`, a linha expande (Radix Collapsible) para mostrar OWR e OOWR.
 function StandingsRow({
   position,
@@ -20,6 +23,7 @@ function StandingsRow({
   credit,
   highlight = false,
   dropped = false,
+  me = false,
   className,
 }: {
   position: number
@@ -37,34 +41,37 @@ function StandingsRow({
   highlight?: boolean
   /** Jogador que deu drop: Badge "Drop" e nome em `ink-muted`. */
   dropped?: boolean
+  /** Linha do próprio jogador: contorno `navy-800`. */
+  me?: boolean
   className?: string
 }) {
   const [open, setOpen] = React.useState(false)
   const expandable = oowr != null
+  const place = podium(position)
 
   const summary = (
     <div
       className={cn(
         "grid w-full items-center gap-3 px-4 py-3 text-left tabular-nums",
-        expandable ? "grid-cols-[24px_1fr_auto_16px]" : "grid-cols-[24px_1fr_auto]"
+        expandable ? "grid-cols-[auto_1fr_auto_16px]" : "grid-cols-[auto_1fr_auto]"
       )}
     >
-      <span
-        className={cn(
-          highlight ? "font-semibold text-gold-deep" : "text-ink-muted"
-        )}
-      >
-        {position}
-      </span>
+      <PositionChip position={position} />
       <span className="flex min-w-0 flex-col">
         <span className="flex min-w-0 items-center gap-2">
-          <span className={cn("truncate", dropped ? "text-ink-muted" : "text-ink")}>
+          <span
+            className={cn(
+              "truncate",
+              dropped ? "text-ink-muted" : "text-ink",
+              place && !dropped && "font-semibold"
+            )}
+          >
             {name}
           </span>
           {dropped ? <Badge tone="neutral">Drop</Badge> : null}
         </span>
         {!expandable ? (
-          <span className="type-caption font-normal text-ink-muted">
+          <span className="text-[11px] leading-4 font-normal text-ink-muted">
             OWR {owr}
           </span>
         ) : null}
@@ -90,7 +97,9 @@ function StandingsRow({
 
   const frame = cn(
     "rounded-lg border bg-card",
-    highlight ? "border-gold" : "border-line",
+    me && "outline-2 -outline-offset-1 outline-navy-800",
+    place ? [place.row, "border-l-[3px]", place.rail] : "border-line",
+    highlight ? "border-gold" : place && "border-line",
     className
   )
 
