@@ -1,4 +1,4 @@
-Confirmação de ação destrutiva: drop de jogador, exclusão de campeonato, encerrar a rodada.
+Primitivo por trás do `ConfirmDialog`. Nas telas, use `ConfirmDialog`: ele já fixa o título em pergunta, a consequência e o verbo no botão. Monte o `AlertDialog` na mão só quando precisar de um conteúdo que o padrão não cobre.
 
 **Você fornece:** `AlertDialog` + `AlertDialogTrigger`, `AlertDialogContent` com `AlertDialogHeader` → `AlertDialogTitle` + `AlertDialogDescription`, e `AlertDialogFooter` com `AlertDialogCancel` e `AlertDialogAction` (`onClick`).
 

@@ -1,3 +1,4 @@
+export { ConfirmDialog } from "./confirm-dialog"
 export { CopyLinkField } from "./copy-link-field"
 export { DataTable, type DataTableColumn } from "./data-table"
 export { EmptyState } from "./empty-state"
