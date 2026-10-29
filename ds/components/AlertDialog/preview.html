@@ -1,0 +1,21 @@
+<!-- @dsCard group="Actions" height=300 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>AlertDialog</title></head>
+<body>
+<div id="r" style="padding:24px;min-height:252px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  h(E.AlertDialog,{defaultOpen:true},
+    h(E.AlertDialogTrigger,{asChild:true},h(E.Button,{variant:'link'},'Drop')),
+    h(E.AlertDialogContent,null,
+      h(E.AlertDialogHeader,null,
+        h(E.AlertDialogTitle,null,'Dropar rafa.nog da Liguinha #24?'),
+        h(E.AlertDialogDescription,null,'O jogador sai dos pareamentos a partir da próxima rodada. Os pontos até aqui ficam no standings.')),
+      h(E.AlertDialogFooter,null,
+        h(E.AlertDialogCancel,null,'Cancelar'),
+        h(E.AlertDialogAction,null,'Dropar jogador')))));
+</script>
+</body>
+</html>

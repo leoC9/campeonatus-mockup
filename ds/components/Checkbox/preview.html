@@ -1,0 +1,16 @@
+<!-- @dsCard group="Forms" height=190 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Checkbox</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;padding:12px 24px;max-width:420px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Checkbox,{defaultChecked:true,label:'Aceito pagar a inscrição no balcão',description:'R$ 25,00 até 19h15 do dia do evento.'}),
+  h(E.Checkbox,{label:'Quero receber o link do standings'}),
+  h(E.Checkbox,{label:'Pré-release',disabled:true}),
+  h('div',{style:{display:'flex',gap:'16px',padding:'12px 0'}},h(E.Checkbox,{'aria-label':'Selecionar todos',checked:'indeterminate'}),h(E.Checkbox,{'aria-label':'Mesa 4',defaultChecked:true}),h(E.Checkbox,{'aria-label':'Mesa 5'}))));
+</script>
+</body>
+</html>

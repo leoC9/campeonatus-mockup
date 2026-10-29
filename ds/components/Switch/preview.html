@@ -1,0 +1,15 @@
+<!-- @dsCard group="Forms" height=170 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Switch</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;padding:16px 24px;max-width:420px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Switch,{defaultChecked:true,label:'Inscrições pelo link',description:'O link do evento aceita novos jogadores.'}),
+  h(E.Switch,{label:'Late reg até a rodada 2'}),
+  h(E.Switch,{label:'Standings público',disabled:true,defaultChecked:true})));
+</script>
+</body>
+</html>

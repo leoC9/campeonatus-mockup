@@ -1,0 +1,15 @@
+<!-- @dsCard group="Forms" height=190 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Textarea</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:6px;padding:24px;max-width:420px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Label,{htmlFor:'obs'},'Observações do evento'),
+  h(E.Textarea,{id:'obs','aria-describedby':'obs-hint',placeholder:'Deck registrado até 19h15. Mesas numeradas pela ordem de chegada.'}),
+  h('span',{id:'obs-hint',className:'type-small',style:{color:'var(--ink-muted)'}},'Aparece na página pública do evento.')));
+</script>
+</body>
+</html>

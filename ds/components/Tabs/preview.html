@@ -1,0 +1,20 @@
+<!-- @dsCard group="Navigation" height=190 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Tabs</title></head>
+<body>
+<div id="r" style="padding:24px;max-width:560px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  h(E.Tabs,{defaultValue:'rodadas'},
+    h(E.TabsList,{'aria-label':'Seções do campeonato'},
+      h(E.TabsTrigger,{value:'rodadas'},'Rodadas'),
+      h(E.TabsTrigger,{value:'standings'},'Standings'),
+      h(E.TabsTrigger,{value:'jogadores'},'Jogadores')),
+    h(E.TabsContent,{value:'rodadas'},h(E.ProgressCard,{label:'Progresso da rodada',value:6,total:9,caption:'de 9 mesas reportadas'})),
+    h(E.TabsContent,{value:'standings'},h(E.StandingsRow,{position:1,name:'rafa.nog',owr:'61,1%',points:12,record:'4–0–0',highlight:true})),
+    h(E.TabsContent,{value:'jogadores'},h('p',{style:{margin:0,color:'var(--ink-muted)'}},'18 jogadores inscritos · 2 pelo balcão'))));
+</script>
+</body>
+</html>

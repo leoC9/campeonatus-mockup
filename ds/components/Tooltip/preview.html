@@ -1,0 +1,16 @@
+<!-- @dsCard group="Content" height=130 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Tooltip</title></head>
+<body>
+<div id="r" style="display:flex;align-items:flex-end;gap:16px;padding:64px 24px 24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+// O canvas roda React 18: o gatilho é o botão do próprio Tooltip (com ref), no desenho do cabeçalho de tabela.
+var trigger='inline-flex h-11 items-center rounded-md border border-control-border bg-card px-3 type-eyebrow text-ink-muted md:h-9';
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Tooltip,{open:true},h(E.TooltipTrigger,{className:trigger},'OWR'),h(E.TooltipContent,null,'Taxa de vitória dos oponentes. Primeiro desempate.')),
+  h(E.Tooltip,null,h(E.TooltipTrigger,{className:trigger},'OOWR'),h(E.TooltipContent,null,'Taxa de vitória dos oponentes dos oponentes. Segundo desempate.'))));
+</script>
+</body>
+</html>
