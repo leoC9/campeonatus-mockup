@@ -443,13 +443,12 @@ export default function Home() {
             <div className="flex w-full max-w-[360px] flex-col overflow-hidden rounded-xl border border-line bg-cream shadow-panel">
               <div className="flex flex-col gap-4 px-4 py-5">
                 <h3 className="m-0 type-h3">Inscrição · Liguinha #24</h3>
-                <p className="m-0 type-small text-ink-muted">Três campos e você entra na lista do lojista.</p>
+                <p className="m-0 type-small text-ink-muted tabular-nums">R$ 25,00 no balcão · 18 de 24 vagas</p>
                 <TextField label="Nome" placeholder="Seu nome completo" />
                 <TextField label="Nickname na liga" defaultValue="rafa.nog" />
                 <TextField label="POPID" defaultValue="4128907" inputMode="numeric" />
               </div>
               <StickyActionBar
-                hint="R$ 25,00 no balcão · 18 de 24 vagas"
                 className="static md:border-t md:border-line md:bg-cream md:px-4 md:pt-3 md:pb-3"
               >
                 <Button block>Confirmar inscrição</Button>
