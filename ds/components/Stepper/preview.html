@@ -1,0 +1,14 @@
+<!-- @dsCard group="Navigation" height=160 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Stepper</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:24px;padding:24px;max-width:420px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Stepper,{steps:['Presença','Recomendação','Início'],current:1}),
+  h(E.Stepper,{steps:['Inscrições','Rodadas','Standings','Crédito'],current:3,label:'Fases do campeonato'})));
+</script>
+</body>
+</html>

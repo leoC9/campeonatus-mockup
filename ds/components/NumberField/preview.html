@@ -1,0 +1,15 @@
+<!-- @dsCard group="Forms" height=210 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>NumberField</title></head>
+<body>
+<div id="r" style="display:flex;flex-wrap:wrap;gap:24px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.NumberField,{label:'Vagas',defaultValue:24,min:4,max:64,step:2,hint:'Até 64 jogadores.'}),
+  h(E.NumberField,{label:'Rodadas',defaultValue:4,min:3,max:6,hint:'Sugerido: 4 para 18 jogadores.'}),
+  h(E.NumberField,{label:'Mesas',defaultValue:0,min:0,max:40,error:'Informe pelo menos 1 mesa.'})));
+</script>
+</body>
+</html>

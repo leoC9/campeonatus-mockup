@@ -1,0 +1,23 @@
+<!-- @dsCard group="Content" height=340 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>RoundTimer</title></head>
+<body>
+<div id="r" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+function Demo(p){
+  var s=React.useState(p.seconds),seconds=s[0],setSeconds=s[1];
+  var r=React.useState(!!p.running),running=r[0],setRunning=r[1];
+  React.useEffect(function(){
+    if(!running)return;
+    var id=setInterval(function(){setSeconds(function(v){return v>0?v-1:0});},1000);
+    return function(){clearInterval(id)};
+  },[running]);
+  React.useEffect(function(){if(seconds===0)setRunning(false)},[seconds]);
+  return h(E.RoundTimer,{durationSeconds:seconds,running:running,onStart:function(){setRunning(true)},onPause:function(){setRunning(false)},onChange:setSeconds,onAdjust:function(){}});
+}
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(Demo,{seconds:1930,running:true}),h(Demo,{seconds:0})));
+</script>
+</body>
+</html>
