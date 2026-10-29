@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-// O link de inscrição do evento, pronto para copiar. URL somente leitura,
-// Badge dizendo se o link está ativo e "Copiar", que vira "Copiado" por 2s.
+// O link de inscrição do evento, pronto para copiar. A URL é imutável: o
+// campo não recebe foco nem clique, só "Copiar" age (vira "Copiado" por 2s).
 function CopyLinkField({
   url,
   active = true,
@@ -64,8 +64,12 @@ function CopyLinkField({
           id={inputId}
           value={url}
           readOnly
-          onFocus={(e) => e.currentTarget.select()}
-          className={cn("flex-1 truncate tabular-nums", !active && "text-ink-muted")}
+          tabIndex={-1}
+          aria-readonly
+          className={cn(
+            "pointer-events-none flex-1 truncate bg-neutral-soft tabular-nums",
+            !active && "text-ink-muted"
+          )}
         />
         <Button
           variant="secondary"
