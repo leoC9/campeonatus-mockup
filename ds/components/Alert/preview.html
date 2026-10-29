@@ -1,0 +1,19 @@
+<!-- @dsCard group="Status" height=330 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Alert</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:12px;padding:24px;max-width:520px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+function icon(){var a=[].slice.call(arguments);return h.apply(null,['svg',{viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.5,strokeLinecap:'round',strokeLinejoin:'round','aria-hidden':true}].concat(a));}
+var check=icon(h('circle',{cx:12,cy:12,r:10}),h('path',{d:'m9 12 2 2 4-4'}));
+var warn=icon(h('path',{d:'m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'}),h('path',{d:'M12 9v4'}),h('path',{d:'M12 17h.01'}));
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.Alert,{tone:'info',icon:check,title:'Inscrição confirmada'},'Você é o 19º inscrito da Liguinha #24. Chegue até 19h15 para o pagamento no balcão.'),
+  h(E.Alert,{tone:'warn',icon:warn,title:'Late reg até a rodada 2'},'Quem entrar agora começa com uma derrota na tabela.'),
+  h(E.Alert,{tone:'danger',title:'Falta reportar 3 mesas',action:h(E.Button,{variant:'link'},'Ver mesas')},'A rodada 4 só pareia depois dos resultados.'),
+  h(E.Alert,{tone:'neutral',title:'Inscrições pelo link fechadas'},'Ainda dá para inscrever no balcão até 19h15.')));
+</script>
+</body>
+</html>

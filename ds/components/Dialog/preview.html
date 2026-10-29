@@ -1,0 +1,24 @@
+<!-- @dsCard group="Actions" height=360 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Dialog</title></head>
+<body>
+<div id="r" style="padding:24px;min-height:312px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  h(E.Dialog,{defaultOpen:true},
+    h(E.DialogTrigger,{asChild:true},h(E.Button,{variant:'secondary'},'Editar inscrição')),
+    h(E.DialogContent,null,
+      h(E.DialogHeader,null,
+        h(E.DialogTitle,null,'Editar inscrição'),
+        h(E.DialogDescription,null,'A alteração vale só para a Liguinha #24. O histórico do jogador não muda.')),
+      h('div',{style:{display:'flex',flexDirection:'column',gap:'16px'}},
+        h(E.TextField,{label:'Nickname na liga',defaultValue:'rafa.nog'}),
+        h(E.TextField,{label:'POPID',defaultValue:'4128907'})),
+      h(E.DialogFooter,null,
+        h(E.DialogClose,{asChild:true},h(E.Button,{variant:'secondary'},'Cancelar')),
+        h(E.Button,null,'Salvar')))));
+</script>
+</body>
+</html>

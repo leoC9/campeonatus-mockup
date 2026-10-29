@@ -1,0 +1,15 @@
+<!-- @dsCard group="Content" height=150 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>PageHeader</title></head>
+<body>
+<div id="r" style="padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  h(E.PageHeader,{eyebrow:'Campeonatos',title:'Liguinha Eternatus #24',status:'Rodada 3 de 4',meta:['Quinta, 18/09 · 19h30','Standard','Suíço 4 · Bo3','18 jogadores']},
+    h(E.Button,{variant:'secondary'},'Standings'),
+    h(E.Button,null,'Reportar rodada')));
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- @dsCard group="Actions" height=170 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>StickyActionBar</title></head>
+<body>
+<div id="r" style="display:flex;flex-direction:column;gap:16px;padding:24px;max-width:420px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h('p',{style:{margin:0,color:'var(--ink-muted)'}},'Três campos e você entra na lista do lojista.'),
+  h(E.StickyActionBar,{hint:'R$ 25,00 no balcão · 18 de 24 vagas'},h(E.Button,{block:true},'Confirmar inscrição'))));
+</script>
+</body>
+</html>

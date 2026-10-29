@@ -26,6 +26,7 @@ Sistema visual da Eternatus Card House e do Eternacamp — o site da loja, a ins
 - `gold` só sobre o escuro (hero, botão outline do hero, destaque do 1º lugar dentro de cartão). Sobre claro, dourado em texto é `gold-deep`.
 - Estrutura escura: `navy-950` no hero, `navy-800` na sidebar do backoffice e no botão principal, `navy-700` no item ativo, `navy-600` na barra de progresso.
 - Status sempre em par fundo/texto e sempre com palavra: `info-soft`/`info-ink` (Abertas, Finalizado, Rodada 3 de 4, Link), `danger-soft`/`danger-ink` (Últimas vagas, Falta reportar), `neutral-soft`/`neutral-ink` (Em breve, Balcão), `gold-soft`/`gold-deep` (Late reg).
+- Pódio do standings, só para posições 1–3: linha em `gold-soft`, `silver-soft` ou `bronze-soft` e medalha em `gold-deep`, `silver-deep` ou `bronze-deep` a 18% sobre ela, texto deep. Cor nunca é o único sinal: o número da posição fica sempre no chip.
 
 ## Tipografia
 

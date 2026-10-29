@@ -265,11 +265,32 @@ function tokensCss(t) {
 
 // Elemento que cada primitivo Radix renderiza, para herdar os atributos HTML.
 const RADIX_ELEMENT = {
+  "AlertDialog.Action": "button",
+  "AlertDialog.Cancel": "button",
+  "AlertDialog.Content": "div",
+  "AlertDialog.Description": "p",
+  "AlertDialog.Overlay": "div",
+  "AlertDialog.Title": "h2",
+  "AlertDialog.Trigger": "button",
+  "Checkbox.Root": "button",
+  "Dialog.Close": "button",
+  "Dialog.Content": "div",
+  "Dialog.Description": "p",
+  "Dialog.Overlay": "div",
+  "Dialog.Title": "h2",
+  "Dialog.Trigger": "button",
   "Label.Root": "label",
   "Progress.Root": "div",
+  "Switch.Root": "button",
+  "Tabs.Content": "div",
+  "Tabs.List": "div",
+  "Tabs.Root": "div",
+  "Tabs.Trigger": "button",
   "Toggle.Root": "button",
   "ToggleGroup.Root": "div",
   "ToggleGroup.Item": "button",
+  "Tooltip.Content": "div",
+  "Tooltip.Trigger": "button",
 }
 
 function buildTypes(exportNames) {
@@ -336,7 +357,9 @@ function buildTypes(exportNames) {
       const fullDoc = ts.displayPartsToString(p.getDocumentationComment(checker)).replace(/\s+/g, " ").trim()
       const doc = /^.*?\.(?=\s|$)/.exec(fullDoc)?.[0] ?? fullDoc
       if (doc) props.push(`  /** ${doc} */`)
-      props.push(`  ${p.name}${optional ? "?" : ""}: ${type};`)
+      // Nome que não é identificador (aria-label) vai entre aspas.
+      const key = /^[A-Za-z_$][\w$]*$/.test(p.name) ? p.name : `'${p.name}'`
+      props.push(`  ${key}${optional ? "?" : ""}: ${type};`)
       rows.push({ name: p.name, type, optional, doc })
     }
     api[name] = { summary: comment, props: rows, native, radix }
@@ -352,7 +375,7 @@ function buildTypes(exportNames) {
 }
 
 function propNames(lines) {
-  const names = lines.map((l) => /^\s+(\w+)\??:/.exec(l)?.[1]).filter(Boolean)
+  const names = lines.map((l) => /^\s+'?([\w-]+)'?\??:/.exec(l)?.[1]).filter(Boolean)
   return names.map((n) => `'${n}'`).join(" | ")
 }
 

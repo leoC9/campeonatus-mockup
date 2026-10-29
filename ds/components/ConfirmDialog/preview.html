@@ -1,0 +1,17 @@
+<!-- @dsCard group="Actions" height=300 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>ConfirmDialog</title></head>
+<body>
+<div id="r" style="padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+ReactDOM.createRoot(document.getElementById('r')).render(
+  h(E.ConfirmDialog,{defaultOpen:true,
+    trigger:h(E.Button,{variant:'link'},'Drop'),
+    action:'dropar rafa.nog da Liguinha #24',
+    consequence:'O jogador sai dos pareamentos a partir da próxima rodada. Os pontos até aqui ficam no standings.',
+    confirmLabel:'Dropar jogador'}));
+</script>
+</body>
+</html>

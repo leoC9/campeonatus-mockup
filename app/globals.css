@@ -25,6 +25,10 @@
   --gold: #c8903a;
   --gold-deep: #8a5d17;
   --gold-soft: #f3e6cc;
+  --silver-deep: #5c6270;
+  --silver-soft: #e6e8ec;
+  --bronze-deep: #7d4a2a;
+  --bronze-soft: #efdfd3;
   --on-navy: #f7f4ed;
   --on-navy-muted: #b9bfd6;
   --info-soft: #d9e1ee;
@@ -118,6 +122,10 @@
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-gold-soft: var(--gold-soft);
+  --color-silver-deep: var(--silver-deep);
+  --color-silver-soft: var(--silver-soft);
+  --color-bronze-deep: var(--bronze-deep);
+  --color-bronze-soft: var(--bronze-soft);
   --color-on-navy: var(--on-navy);
   --color-on-navy-muted: var(--on-navy-muted);
   --color-info-soft: var(--info-soft);

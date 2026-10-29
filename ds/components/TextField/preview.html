@@ -1,4 +1,4 @@
-<!-- @dsCard group="Forms" height=200 -->
+<!-- @dsCard group="Forms" height=290 -->
 <!doctype html>
 <html lang="pt-BR">
 <head><meta charset="utf-8"><title>TextField</title></head>
@@ -6,7 +6,7 @@
 <div id="r" style="display:flex;flex-direction:column;gap:16px;padding:24px;max-width:360px"></div>
 <script>
 var E=window.Eternatus,h=React.createElement;
-ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.TextField,{label:'Nickname na liga',defaultValue:'rafa.nog'}),h(E.TextField,{label:'POPID',defaultValue:'4128907',hint:'Usado para o seu histórico na liga.'})));
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.TextField,{label:'Nickname na liga',defaultValue:'rafa.nog'}),h(E.TextField,{label:'POPID',defaultValue:'4128907',hint:'Usado para o seu histórico na liga.'}),h(E.TextField,{label:'POPID',defaultValue:'41289',error:'POPID com 7 dígitos.'})));
 </script>
 </body>
 </html>

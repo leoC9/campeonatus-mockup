@@ -1,4 +1,4 @@
-<!-- @dsCard group="Content" height=170 -->
+<!-- @dsCard group="Content" height=330 -->
 <!doctype html>
 <html lang="pt-BR">
 <head><meta charset="utf-8"><title>StandingsRow</title></head>
@@ -6,7 +6,12 @@
 <div id="r" style="display:flex;flex-direction:column;gap:8px;padding:24px;max-width:360px"></div>
 <script>
 var E=window.Eternatus,h=React.createElement;
-ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,h(E.StandingsRow,{position:1,name:'rafa.nog',owr:'61,1%',points:12,record:'4–0–0',highlight:true}),h(E.StandingsRow,{position:2,name:'nanda.tcg',owr:'58,3%',points:9,record:'3–1–0'})));
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.StandingsRow,{position:1,name:'rafa.nog',owr:'61,1%',points:12,record:'4–0–0',highlight:true}),
+  h(E.StandingsRow,{position:2,name:'nanda.tcg',owr:'58,3%',oowr:'54,2%',points:9,record:'3–1–0'}),
+  h(E.StandingsRow,{position:3,name:'lipe.pkm',owr:'55,0%',oowr:'51,7%',points:9,record:'3–1–0',credit:'R$ 30,00'}),
+  h(E.StandingsRow,{position:4,name:'pedro.hbk',owr:'52,4%',points:9,record:'3–1–0',me:true}),
+  h(E.StandingsRow,{position:17,name:'joao.dropou.no.meio',owr:'40,2%',points:3,record:'1–1–0',dropped:true})));
 </script>
 </body>
 </html>

@@ -31,7 +31,7 @@ Lendo assim: o sistema do Eternacamp para lojistas e jogadores de TCG, linguagem
 
 ```design-tokens
 fonts: Inter
-colors: #e7e3d8, #f7f4ed, #fcfbf8, #dedad0, #8f8a7c, #141d3e, #1d2a56, #2b3a6e, #424773, #1c2344, #5b5f70, #7c2934, #c8903a, #8a5d17, #f3e6cc, #b9bfd6, #d9e1ee, #2f3f75, #f5d0d8, #8a2436, #eae9e5, #5f5e5a
+colors: #e7e3d8, #f7f4ed, #fcfbf8, #dedad0, #8f8a7c, #141d3e, #1d2a56, #2b3a6e, #424773, #1c2344, #5b5f70, #7c2934, #c8903a, #8a5d17, #f3e6cc, #5c6270, #e6e8ec, #7d4a2a, #efdfd3, #b9bfd6, #d9e1ee, #2f3f75, #f5d0d8, #8a2436, #eae9e5, #5f5e5a
 radii: 0, 6px, 8px, 12px, 16px, 999px
 ```
 

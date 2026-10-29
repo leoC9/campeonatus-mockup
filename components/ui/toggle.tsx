@@ -7,7 +7,7 @@ import { Toggle as TogglePrimitive } from "radix-ui"
 
 // Opção selecionável: selecionado em `info-soft` com texto `info-ink`.
 const toggleVariants = cva(
-  "inline-flex h-11 cursor-pointer items-center justify-center gap-1 px-3 type-ui md:h-9 whitespace-nowrap text-ink transition-colors outline-none focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-navy-800 disabled:pointer-events-none disabled:opacity-45 data-[state=on]:bg-info-soft data-[state=on]:font-medium data-[state=on]:text-info-ink [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "inline-flex h-11 cursor-pointer items-center justify-center gap-1 px-3 type-ui md:h-9 whitespace-nowrap text-ink transition-colors focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-navy-800 disabled:pointer-events-none disabled:opacity-45 data-[state=on]:bg-info-soft data-[state=on]:font-medium data-[state=on]:text-info-ink [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {

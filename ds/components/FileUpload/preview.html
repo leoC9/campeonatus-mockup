@@ -1,0 +1,16 @@
+<!-- @dsCard group="Forms" height=330 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>FileUpload</title></head>
+<body>
+<div id="r" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;padding:24px"></div>
+<script>
+var E=window.Eternatus,h=React.createElement;
+var art='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="320" height="160"><rect width="320" height="160" rx="12" fill="#141d3e"/><rect x="24" y="24" width="72" height="104" rx="12" fill="#7c2934"/><rect x="124" y="24" width="72" height="104" rx="12" fill="#f7f4ed"/><rect x="224" y="24" width="72" height="104" rx="12" fill="#c8903a"/></svg>');
+ReactDOM.createRoot(document.getElementById('r')).render(h(React.Fragment,null,
+  h(E.FileUpload,{label:'Imagem do evento'}),
+  h(E.FileUpload,{label:'Imagem do evento',src:art,fileName:'liguinha-24.png'}),
+  h(E.FileUpload,{label:'Logo da loja',error:'Arquivo com 3,4 MB. O limite é 2 MB.'})));
+</script>
+</body>
+</html>
