@@ -89,7 +89,7 @@ export default function Home() {
             <Button>Confirmar inscrição</Button>
             <Button variant="secondary">Cancelar</Button>
             <Button variant="link">Inscrever-se</Button>
-            <Button size="sm">+ Novo campeonato</Button>
+            <Button size="sm">Novo campeonato</Button>
             <Button disabled>Indisponível</Button>
           </div>
         </section>
@@ -467,7 +467,7 @@ export default function Home() {
         <div className="flex flex-1 flex-col gap-6 bg-cream p-8">
           <div className="flex items-center justify-between gap-4">
             <h2 className="m-0 type-h2">Campeonatos</h2>
-            <Button size="sm">+ Novo campeonato</Button>
+            <Button size="sm">Novo campeonato</Button>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             <ProgressCard
